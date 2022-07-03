@@ -88,6 +88,7 @@ export default function Home() {
         <>
           <div
             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+            onClick={() => setShowModal(false)}
           >
             <div className="relative my-6 mx-auto max-w-3xl sm:w-3/4 sm:w-3/4 lg:w-1/4 lg:h-3/4 m-20">
               {/*content*/}
@@ -150,13 +151,6 @@ export default function Home() {
                 </div>
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6  rounded-b">
-                  <button
-                    className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                    type="button"
-                    onClick={() => setShowModal(false)}
-                  >
-                    Close
-                  </button>
                 </div>
               </div>
             </div>
