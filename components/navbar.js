@@ -10,7 +10,7 @@ import { useRouter } from 'next/router'
 const navigation = [
   { name: 'Home', href: '/', current: true },
   { name: 'My Work', href: '/works', current: false },
-  { name: 'About Me', href: '#', current: false },
+  { name: 'About Me', href: '/about', current: false },
 ]
 
 function classNames(...classes) {
