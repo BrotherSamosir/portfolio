@@ -35,7 +35,7 @@ export default function About() {
        <div className="lg:hidden md:hidden sm:block flex flex-col p-15 mb-15 ">
         <div className="flex flex-1 flex-col w-full text-white mb-20">
             <div className={`myimage flex flex-col justify-center p-20`}>
-                <div className='flex flex-1 w-full'>
+                <div className='flex flex-1 w-full px-10'>
                 <Image
                     className='w-full  h-full w-100 h-100  z-40'
                     src={mypic}
