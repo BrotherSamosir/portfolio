@@ -80,7 +80,7 @@ export default function Works() {
                 {
                     works.map(item=>{
                         return (
-                            <li id={item.id} className='flex flex-1 w-full'>
+                            <li key={item.id} className='flex flex-1 w-full'>
                             <div className="w-[300px] h-[700px] m-1 mb-10 rounded overflow-hidden shadow-lg bg-[#2b28288c] opacity-60">
                             <Image
                                     className='w-full h-1/2'
