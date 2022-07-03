@@ -3,10 +3,18 @@ import Image from 'next/image'
 import mypic from '../assets/home-profile-foto.png'
 import figmaLogo from '../assets/skills/figma-logo.png'
 import modalImg from '../assets/modal-image.png'
+import { motion }from 'framer-motion'
 
 import styles from '../styles/Home.module.css'
 import {FIGMA_IMG_DATA, XD_IMAGE_DATA, PROTO_TYPE_IMG_DATA, WIRE_FRAME_IMG_DATA} from '../data/skill-image.json'
 import { useRouter } from 'next/router'
+
+const variants = {
+  hidden: { opacity: 0, x: -200, y: 0 },
+  enter: { opacity: 1, x: 0, y: 0 },
+  exit: { opacity: 0, x: 0, y: -100 },
+}
+
 
 
 
@@ -16,6 +24,14 @@ export default function Home() {
 
 
   return (
+    <motion.main
+            initial="hidden"
+            animate="enter"
+            exit="exit"
+            variants={variants}
+            transition={{ type: 'linear' }}
+            delay={0.2}
+        >
     <div className={styles.container}>
     <div  className={styles.container_image}>  
       <Image
@@ -78,7 +94,7 @@ export default function Home() {
       </div>
       <div className={styles.link_buttons}>
         <button className={styles.button} onClick={() => router.push('/works')}>Check out My Work</button>
-        <a href='#' target={'_blank'} rel="noreferrer" className={styles.button} style={{cursor:'pointer'}}>Download Resume</a>
+        <a href='https://drive.google.com/file/d/1SZq1bUcE8nxJ38LIWPvrtUP9tU-ODAoi/view?usp=sharing' target={'_blank'} rel="noreferrer" className={styles.button} style={{cursor:'pointer'}}>Download Resume</a>
         <button className={styles.button} onClick={() => setShowModal(true)}
 >Contact</button>
       </div>
@@ -159,6 +175,7 @@ export default function Home() {
         </>
       ) : null}
     </div>
+    </motion.main>
   )
 }
 

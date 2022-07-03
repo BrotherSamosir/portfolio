@@ -2,6 +2,15 @@ import Image from 'next/image'
 import foodAppImg from '../assets/portfolio/food-app.png'
 import learningAppImg from '../assets/portfolio/learning-app.png'
 import tiketMovieAppImg from '../assets/portfolio/tiket-movie-app.png'
+import { motion }from 'framer-motion'
+
+
+const variants = {
+    hidden: { opacity: 0, x: -200, y: 0 },
+    enter: { opacity: 1, x: 0, y: 0 },
+    exit: { opacity: 0, x: 0, y: -100 },
+}
+
 
 const works = [
     {
@@ -28,6 +37,14 @@ const works = [
 export default function Works() {
     return (
         <>
+        <motion.main
+            initial="hidden"
+            animate="enter"
+            exit="exit"
+            variants={variants}
+            transition={{ type: 'linear' }}
+            delay={0.2}
+            >
         <div className="hidden md:block lg:block flex flex-col p-10">
             <div className="flex flex-1 w-full justify-center mb-10">
                 <h1 className="text-xl text-white text-center text-2xl">Explore
@@ -72,15 +89,15 @@ export default function Works() {
             }
        </div>
        <div className='sm:block md:hidden lg:hidden'>
-       <div className="flex flex-1 w-full justify-center mb-10">
+       <div className="flex flex-1 w-full h-full mb-15 justify-center">
                 <h1 className="text-xl text-white text-center text-2xl">Explore
                 My Work</h1>
             </div>
-            <ul className='flex flex-row overflow-x-scroll	'>
+            <ul className='flex flex-row overflow-x-scroll	mb-50'>
                 {
                     works.map(item=>{
                         return (
-                            <li key={item.id} className='flex flex-1 w-full'>
+                            <li key={item.id} className='flex flex-1 w-full mb-1/2'>
                             <div className="w-[300px] h-[700px] m-1 mb-10 rounded overflow-hidden shadow-lg bg-[#2b28288c] opacity-60">
                             <Image
                                     className='w-full h-1/2'
@@ -91,11 +108,12 @@ export default function Works() {
                             <div className="px-6 py-4">
                             <div className="font-bold text-white text-xl mb-2 text-center">{item.name}</div>
                             <p className="text-white text-base">
-                                {item.paragraph.slice(0, 100)}...
+                                {item.paragraph.slice(0, 200)}...
                             </p>
                             <center>
                             <button className={'rounded-xl	mt-5 w-1/2 h-[50px] bg-white text-sm hover:bg-[#508CFF]  text-[#508CFF] hover:text-white ml-3  text-base'}>See more details</button>
                             </center>
+                            <br/>
                             </div>
                         </div>
                          </li>
@@ -103,7 +121,9 @@ export default function Works() {
                     })
                 }
             </ul>
+            <br/>
        </div>
+       </motion.main>
        </>
     )
 }

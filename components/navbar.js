@@ -13,6 +13,12 @@ const navigation = [
   { name: 'About Me', href: '/about', current: false },
 ]
 
+const variantsMenu = {
+  open: { opacity: 1, x: 0 },
+  closed: { opacity: 0, x: "-100%" },
+}
+
+
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }

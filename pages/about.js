@@ -1,12 +1,25 @@
 import Image from 'next/image'
 import mypic from '../assets/about-profile.png'
+import { motion }from 'framer-motion'
 
 
-
+const variants = {
+    hidden: { opacity: 0, x: -200, y: 0 },
+    enter: { opacity: 1, x: 0, y: 0 },
+    exit: { opacity: 0, x: 0, y: -100 },
+}
 
 export default function About() {
     return (
         <>
+        <motion.main
+            initial="hidden"
+            animate="enter"
+            exit="exit"
+            variants={variants}
+            transition={{ type: 'linear' }}
+            delay={0.2}
+        >
         <div className="hidden md:block lg:block flex flex-col p-20 m-10">
         <div className="flex flex-1 flex-row w-full text-white mb-20">
             <div className={`myimage flex z-30`}>
@@ -33,7 +46,7 @@ export default function About() {
         </div>
        </div>
        <div className="lg:hidden md:hidden sm:block flex flex-col p-15 mb-15 ">
-        <div className="flex flex-1 flex-col w-full text-white mb-20">
+        <div className="flex flex-1 flex-col w-full text-white mb-40">
             <div className={`myimage flex flex-col justify-center p-20`}>
                 <div className='flex flex-1 w-full px-10'>
                 <Image
@@ -61,6 +74,7 @@ export default function About() {
             </div>
         </div>
        </div>
+       </motion.main>
        </>
     )
 }
