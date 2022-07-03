@@ -71,6 +71,39 @@ export default function Works() {
                 })
             }
        </div>
+       <div className='sm:block md:hidden lg:hidden'>
+       <div className="flex flex-1 w-full justify-center mb-10">
+                <h1 className="text-xl text-white text-center text-2xl">Explore
+                My Work</h1>
+            </div>
+            <ul className='flex flex-row overflow-x-scroll	'>
+                {
+                    works.map(item=>{
+                        return (
+                            <li className='flex flex-1 w-full'>
+                            <div className="w-[300px] h-[700px] m-1 mb-10 rounded overflow-hidden shadow-lg bg-[#2b28288c] opacity-60">
+                            <Image
+                                    className='w-full h-1/2'
+                                    src={item.image}
+                                    alt="Picture of the author"
+                                    placeholder="blur" // placeholder="empty" 
+                                />
+                            <div className="px-6 py-4">
+                            <div className="font-bold text-white text-xl mb-2 text-center">{item.name}</div>
+                            <p className="text-white text-base">
+                                {item.paragraph.slice(0, 100)}...
+                            </p>
+                            <center>
+                            <button className={'rounded-xl	mt-5 w-1/2 h-[50px] bg-white text-sm hover:bg-[#508CFF]  text-[#508CFF] hover:text-white ml-3  text-base'}>See more details</button>
+                            </center>
+                            </div>
+                        </div>
+                         </li>
+                        )
+                    })
+                }
+            </ul>
+       </div>
        </>
     )
 }
