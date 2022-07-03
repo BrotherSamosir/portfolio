@@ -50,11 +50,11 @@ export default function About() {
                     <br/>
                     <span>
                         <h1 className='text-3xl '>Alders Antonius Samosir</h1>
-                        <p>Entry Level Ui&Ux Designer</p>
+                        <p>{"Entry Level Ui & Ux Designer"}</p>
                     </span>
                     <br/><br/><br/>
                     <span className='w-[200px]'>
-                    I'm Alders, an entry-level UI&UX designer who takes up the challenge of turning complex goals into designs that are simple, accessible, fun and easy to use.
+                    {"I'm Alders, an entry-level UI&UX designer who takes up the challenge of turning complex goals into designs that are simple, accessible, fun and easy to use."}
                     </span>
                 </div>
                 </div>
