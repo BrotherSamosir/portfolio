@@ -45,7 +45,7 @@ export default function Home() {
                 imgId: 'image0_181_66'
               }].map(({imgId, name, background}) => {
                 return (
-                  <div className={styles.skill_item}>
+                  <div key={imgId} className={styles.skill_item}>
                     <div className="relative w-[80px] h-[80px] sm:rounded-full overflow-hidden">
                         <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
                           <circle cx={15} cy={15} r={15} fill={`url(#pattern${imgId})`} />
