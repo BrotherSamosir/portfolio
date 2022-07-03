@@ -3,7 +3,7 @@ import mypic from '../assets/home-profile-foto.png'
 import figmaLogo from '../assets/skills/figma-logo.png'
 
 import styles from '../styles/Home.module.css'
-import {FIGMA_IMG_DATA, XD_IMAGE_DATA, PROTO_TYPE_IMG_DATA} from '../data/skill-image.json'
+import {FIGMA_IMG_DATA, XD_IMAGE_DATA, PROTO_TYPE_IMG_DATA, WIRE_FRAME_IMG_DATA} from '../data/skill-image.json'
 
 
 export default function Home() {
@@ -43,6 +43,10 @@ export default function Home() {
                 name: 'Prototype',
                 background: PROTO_TYPE_IMG_DATA,
                 imgId: 'image0_181_66'
+              },{
+                name: 'Wireframing',
+                background: WIRE_FRAME_IMG_DATA,
+                imgId: 'image0_181_67'
               }].map(({imgId, name, background}) => {
                 return (
                   <div key={imgId} className={styles.skill_item}>

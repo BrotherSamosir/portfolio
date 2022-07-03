@@ -3,11 +3,13 @@ import { Fragment, useState } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { BellIcon, MenuAlt1Icon, XIcon } from '@heroicons/react/outline'
 import navbarCss from '../styles/components/navbar.module.css'
+import { useRouter } from 'next/router'
+
 
 
 const navigation = [
-  { name: 'Home', href: '#', current: true },
-  { name: 'My Work', href: '#', current: false },
+  { name: 'Home', href: '/', current: true },
+  { name: 'My Work', href: '/works', current: false },
   { name: 'About Me', href: '#', current: false },
 ]
 
@@ -15,8 +17,14 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
+
+function isActiveRoutes (routerPath, href) {
+  return routerPath === href
+}
+
 export default function Navbar() {
   const [showSidebar, setShowSidebar] = useState(false);
+  const router = useRouter()
 
   return (
     <Disclosure as="nav" className={navbarCss.navbar}>
@@ -44,9 +52,10 @@ export default function Navbar() {
                     {navigation.map((item) => (
                       <a
                         key={item.name}
-                        href={item.href}
-                        className={item.current ? navbarCss.navbar_menu_item_active : navbarCss.navbar_menu_item }
-                        aria-current={item.current ? 'page' : undefined}
+                        href={'#'}
+                        onClick={() => router.push(item.href)}
+                        className={isActiveRoutes(router.pathname, item.href) ? navbarCss.navbar_menu_item_active : navbarCss.navbar_menu_item }
+                        aria-current={isActiveRoutes(router.pathname, item.href) ? 'page' : undefined}
                       >
                         {item.name}
                       </a>
@@ -74,9 +83,10 @@ export default function Navbar() {
                     <Disclosure.Button
                       key={item.name}
                       as="a"
-                      href={item.href}
-                      className={item.current ? navbarCss.nav_bar_menu_item_mobile_active : navbarCss.nav_bar_menu_item_mobile }
-                      aria-current={item.current ? 'page' : undefined}
+                      href={'#'}
+                      onClick={() => router.push(item.href)}
+                      className={isActiveRoutes(router.pathname, item.href) ? navbarCss.nav_bar_menu_item_mobile_active : navbarCss.nav_bar_menu_item_mobile }
+                      aria-current={isActiveRoutes(router.pathname, item.href) ? 'page' : undefined}
                     >
                       {item.name}
                     </Disclosure.Button>

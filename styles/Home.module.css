@@ -37,5 +37,5 @@
 }
 
 .button {
-  @apply rounded w-1/5 bg-white text-sm hover:bg-[#508CFF] py-2 px-2 text-[#508CFF] hover:text-white ml-3 mt-5 m-5  sm:text-xs	 ;
+  @apply rounded-lg	 w-1/5 bg-white text-sm hover:bg-[#508CFF] py-2 px-2 text-[#508CFF] hover:text-white ml-3 mt-5 m-5  sm:text-xs	 ;
 }
