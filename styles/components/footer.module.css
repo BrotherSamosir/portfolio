@@ -1,0 +1,7 @@
+.footer {
+  @apply bg-navigation-bar  w-full h-[50px] w-full  bottom-0 fixed;
+}
+
+.footer_title  {
+    @apply text-white lg:text-[20px] md:text-[20px] sm:text-[10px] absolute w-full text-center p-2;
+} 

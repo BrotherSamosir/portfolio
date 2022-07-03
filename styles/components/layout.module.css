@@ -1,0 +1,7 @@
+.main_banner {
+   @apply h-[100vh] bg-no-repeat bg-cover z-10	
+}
+
+.bg_drop {
+    @apply bg-black  opacity-90;
+}

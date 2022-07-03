@@ -1,0 +1,49 @@
+.navbar {
+    @apply lg:bg-navigation-bar md:bg-navigation-bar sm:bg-transparent;
+}
+
+.navbar_logo_text {
+    @apply text-white flex-shrink-0 flex items-center text-[20px] text-left;
+}
+
+.navbar_menu {
+    @apply w-full h-full;
+}
+.navbar_menu_item {
+    @apply text-[#F1ECEC] text-[25px] hover:underline ml-10; 
+}
+
+.navbar_menu_item_active {
+   @apply text-white text-[25px] underline font-bold ml-10;
+}
+
+.navbar_menu_mobile {
+    @apply  p-2 bg-[#508CFF] opacity-100 w-full h-full absolute top-0 bottom-0 right-0 z-40 ;
+}
+
+.navbar_menu_blur {
+    @apply  p-2 bg-[#000000] backdrop-blur-xl opacity-80 w-full h-full absolute top-0 bottom-0 right-0 z-40 ;
+}
+
+.in_navbar_mobile {
+   @apply -translate-x-0;
+}
+
+.out_navbar_mobile {
+  @apply -translate-x-full;
+}
+.mobile_menu_container {
+    @apply pl-10 p-10 flex flex-col text-center z-50 ;
+}
+
+.nav_bar_menu_logo_mobile {
+    @apply  text-[25px] z-50 text-white  font-semibold mb-[250px]; 
+} 
+
+.nav_bar_menu_item_mobile {
+   @apply  text-[25px] z-50 text-white mt-[4rem] active:underline; 
+}
+
+.nav_bar_menu_item_mobile_active {
+    @apply  text-[25px] z-50 text-white font-bold mt-10 underline;
+}

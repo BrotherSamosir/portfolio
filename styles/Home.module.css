@@ -1,0 +1,41 @@
+.container {
+    @apply w-full h-full flex flex-col ;
+}
+
+.container_image {
+   @apply flex-1 justify-center   text-center z-40 lg:pt-8 md:pt-3 mt-16;
+}
+
+.images {
+  @apply w-[100px] h-[100px];
+}
+
+.greetings {
+    @apply flex-1 w-full text-white text-center text-3xl;
+}
+
+.greet_word {
+    @apply flex-1 w-full text-white text-center text-base pt-2;
+}
+
+.skill {
+  @apply w-full flex flex-col flex-1 justify-center  text-center pt-5
+}
+.skill_title {
+  @apply w-full flex flex-1 text-white text-center justify-center  text-2xl;
+}
+.skill_list {
+  @apply flex flex-1 flex-row pt-2 justify-center text-center;
+}
+
+.skill_item {
+  @apply ml-2 justify-center text-center ;
+}
+
+.link_buttons{
+  @apply flex flex-1 pt-2 justify-center text-center px-5 sm:pb-5 pl-5 pr-5;
+}
+
+.button {
+  @apply rounded w-1/5 bg-white text-sm hover:bg-[#508CFF] py-2 px-2 text-[#508CFF] hover:text-white ml-3 mt-5 m-5  sm:text-xs	 ;
+}
