@@ -79,7 +79,7 @@ export default function Navbar() {
                 <Disclosure.Button
                    key={'logo'}
                    as="a"
-                   href={'/'}
+                   onClick={() => router.push('/')}
                    className={navbarCss.nav_bar_menu_logo_mobile}
                    aria-current={true ? 'page' : undefined}
                 >

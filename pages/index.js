@@ -99,9 +99,18 @@ export default function Home() {
 >Contact</button>
       </div>
       <div className='lg:hidden h-[200px]'>small show</div>
+
       {/* modal contact */}
       {showModal ? (
         <>
+          <motion.div
+         initial="hidden"
+         animate="enter"
+         exit="exit"
+         variants={variants}
+         transition={{ type: 'linear' }}
+         delay={0.2}
+      >
           <div
             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
             onClick={() => setShowModal(false)}
@@ -172,6 +181,7 @@ export default function Home() {
             </div>
           </div>
           <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
+          </motion.div>
         </>
       ) : null}
     </div>
