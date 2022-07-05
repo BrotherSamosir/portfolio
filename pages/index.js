@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import  { useState, useEffect } from 'react';
 import Image from 'next/image'
 import mypic from '../assets/home-profile-foto.png'
 import figmaLogo from '../assets/skills/figma-logo.png'
@@ -21,7 +21,11 @@ const variants = {
 export default function Home() {
   const router = useRouter()
   const [showModal, setShowModal] = useState(false);
+  const [screenHeight, setScreenHeight] = useState(0)
 
+  useEffect(() => {
+    setScreenHeight(window.innerHeight)
+  }, []);
 
   return (
     <motion.main
@@ -32,7 +36,7 @@ export default function Home() {
             transition={{ type: 'linear' }}
             delay={0.2}
         >
-    <div className={styles.container}>
+    <div className={styles.container} style={{height: screenHeight}}>
     <div  className={styles.container_image}>  
       <Image
             className={styles.images}
