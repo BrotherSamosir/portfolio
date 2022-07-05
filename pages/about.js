@@ -20,9 +20,9 @@ export default function About() {
             transition={{ type: 'linear' }}
             delay={0.2}
         >
-        <div className="hidden md:block lg:block flex flex-col p-20 m-10">
+        <div className="hidden md:hidden lg:block flex flex-col md:p-40 lg:p-52 m-10 ">
         <div className="flex flex-1 flex-row w-full text-white mb-20">
-            <div className={`myimage flex z-30`}>
+            <div className={`myimage flex z-30 `}>
                 <Image
                     className='w-full h-1/2'
                     src={mypic}
@@ -45,9 +45,9 @@ export default function About() {
             </div>
         </div>
        </div>
-       <div className="lg:hidden md:hidden sm:block flex flex-col p-15 mb-15 ">
+       <div className="lg:hidden md:block sm:block flex flex-col p-15 mb-15 md:p-52">
         <div className="flex flex-1 flex-col w-full text-white mb-40">
-            <div className={`myimage flex flex-col justify-center p-20`}>
+            <div className={`myimage flex flex-col justify-center p-20 `}>
                 <div className='flex flex-1 w-full px-10'>
                 <Image
                     className='w-full  h-full w-100 h-100  z-40'

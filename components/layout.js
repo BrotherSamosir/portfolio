@@ -1,3 +1,4 @@
+import  { useState, useEffect } from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
 import Navbar from './navbar'
@@ -9,8 +10,13 @@ import 'animate.css';
 
 
 
-
 export default function Layout({ children }) {
+  const [screenHeight, setScreenHeight] = useState(0)
+  
+  useEffect(() => {
+    setScreenHeight(window.innerHeight)
+  }, []);
+
   return (
     <>
       <Head>
@@ -20,12 +26,13 @@ export default function Layout({ children }) {
       </Head>
       <AnimateSharedLayout>
       <div style={{
-        backgroundImage: `url(${bg.src})`
+        backgroundImage: `url(${bg.src})`,
+        height: screenHeight
       }} 
       className={layoutCss.main_banner}>
         <div className={layoutCss.bg_drop}>
         <Navbar />
-        <main className='animate__fadeInLeft'>{children}</main>
+        <main className='animate__fadeInLeft w-full'>{children}</main>
         <Footer />
         </div>
       </div>
