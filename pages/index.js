@@ -98,7 +98,8 @@ export default function Home() {
       </div>
       <div className={styles.link_buttons}>
         <button className={styles.button} onClick={() => router.push('/works')}>Check out My Work</button>
-        <a href='https://drive.google.com/file/d/1SZq1bUcE8nxJ38LIWPvrtUP9tU-ODAoi/view?usp=sharing' target={'_blank'} rel="noreferrer" className={styles.button} style={{cursor:'pointer'}}>Download Resume</a>
+        <a href='https://drive.google.com/file/d/1SZq1bUcE8nxJ38LIWPvrtUP9tU-ODAoi/view?usp=sharing' target={'_blank'} rel="noreferrer" ></a>
+        <button className={styles.button} style={{cursor:'pointer'}}> Download Resume</button>
         <button className={styles.button} onClick={() => setShowModal(true)}
 >Contact</button>
       </div>
