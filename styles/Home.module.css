@@ -3,7 +3,7 @@
 }
 
 .container_image {
-   @apply flex-1 justify-center   text-center z-40 lg:pt-0 md:pt-3 mt-16;
+   @apply flex-1 justify-center   text-center z-40 lg:pt-0 md:pt-0 mt-16;
 }
 
 .images {
@@ -33,7 +33,7 @@
 }
 
 .link_buttons{
-  @apply flex flex-1 justify-center text-center;
+  @apply flex flex-1 justify-center text-center ;
 }
 
 .button {

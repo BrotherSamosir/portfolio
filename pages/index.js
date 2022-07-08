@@ -25,6 +25,9 @@ export default function Home() {
 
   useEffect(() => {
     setScreenHeight(window.innerHeight)
+    //window.screen.lockOrientation('portrait');
+   // const locOrientation = screen.lockOrientation
+
   }, []);
 
   return (
