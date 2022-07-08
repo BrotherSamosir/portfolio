@@ -104,7 +104,7 @@ export default function Home() {
         Check out My Work
         </button>
         <a className={styles.button} style={{cursor:'pointer'}} href='https://drive.google.com/file/d/1SZq1bUcE8nxJ38LIWPvrtUP9tU-ODAoi/view?usp=sharing' target={'_blank'} rel="noreferrer" >
-        <button  style={{padding: 10}}>
+        <button  className={styles.button_link_a}>
            Download Resume</button>
            </a>
         <button className={styles.button} onClick={() => setShowModal(true)}

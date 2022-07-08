@@ -48,7 +48,7 @@ export default function Works() {
             transition={{ type: 'linear' }}
             delay={0.2}
             >
-        <div className="hidden md:block lg:block flex flex-col p-10">
+        <div className="hidden md:hidden lg:block flex flex-col pt-10">
             <div className="flex flex-1 w-full justify-center mb-10">
                 <h1 className="text-xl text-white text-center text-2xl">Explore
                 My Work</h1>
@@ -91,12 +91,12 @@ export default function Works() {
                 })
             }
        </div>
-       <div className='sm:block md:hidden lg:hidden'>
-       <div className="flex flex-1 w-full h-full mb-15 justify-center">
+       <div className='sm:block md:block lg:hidden p-5'>
+       <div className="flex flex-1 w-full h-full mb-15 justify-center md:mt-10 md:mb-5">
                 <h1 className="text-xl text-white text-center text-2xl">Explore
                 My Work</h1>
             </div>
-            <ul className='flex flex-row overflow-x-scroll	mb-50'>
+            <ul className='flex flex-row overflow-x-scroll	md:mb-96'>
                 {
                     works.map(item=>{
                         return (
