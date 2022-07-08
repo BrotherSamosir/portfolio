@@ -26,7 +26,7 @@ export default function About() {
             transition={{ type: 'linear' }}
             delay={0.2}
         >
-        <div className="hidden md:hidden lg:block flex flex-col md:p-40 lg:p-12 " style={{height: screenHeight}}>
+        <div className="hidden md:hidden lg:block flex flex-col md:p-40 lg:p-50 " style={{height: screenHeight}}>
         <div className="flex flex-1 flex-row w-full text-white mb-20">
             <div className={`myimage flex z-30 `}>
                 <Image
@@ -51,7 +51,7 @@ export default function About() {
             </div>
         </div>
        </div>
-       <div className="lg:hidden md:block sm:block flex flex-col p-15 mb-15 md:flex-row " style={{height: screenHeight}}>
+       <div className="lg:hidden md:block sm:block flex flex-col p-15 mb-15 md:flex-row md:p-50 " style={{height: screenHeight}}>
         <div className="flex flex-1 flex-col w-full text-white mb-40">
             <div className={`myimage flex flex-col justify-center p-20 `}>
                 <div className='flex flex-1 w-full px-10'>
