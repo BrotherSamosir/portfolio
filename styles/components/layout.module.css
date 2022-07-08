@@ -3,5 +3,5 @@
 }
 
 .bg_drop {
-    @apply bg-black  opacity-90 md:h-full;
+    @apply bg-black  opacity-90 md:h-full landscape:h-[400vh];
 }

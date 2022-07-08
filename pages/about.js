@@ -52,7 +52,7 @@ export default function About() {
         </div>
        </div>
        <div className="lg:hidden md:block sm:block flex flex-col p-15 mb-15 md:flex-row md:p-50 " style={{height: screenHeight}}>
-        <div className="flex flex-1 flex-col w-full text-white mb-40">
+        <div className="flex flex-1 flex-col w-full text-white mb-40 landscape:p-10 portrait:p-20"  >
             <div className={`myimage flex flex-col justify-center`}>
                 <div className='flex flex-1 w-full px-10'>
                 <Image
