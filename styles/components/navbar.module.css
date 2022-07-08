@@ -3,7 +3,7 @@
 }
 
 .navbar_logo_text {
-    @apply text-white flex-shrink-0 flex items-center text-[20px] text-left;
+    @apply text-white flex-shrink-0 flex items-center text-2xl text-left;
 }
 
 .navbar_menu {

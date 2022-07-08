@@ -21,8 +21,7 @@ export default function Layout({ children }) {
     <>
       <AnimateSharedLayout>
       <div style={{
-        backgroundImage: `url(${bg.src})`,
-        //height: screenHeight
+        backgroundImage: `url(${bg.src})`
       }} 
       className={layoutCss.main_banner} >
         <div className={layoutCss.bg_drop} >

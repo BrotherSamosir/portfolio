@@ -51,7 +51,7 @@ export default function Navbar() {
               </div>
               <div className="flex-1 w-full flex items-center justify-center sm:items-stretch sm:justify-start">
                 <div className={navbarCss.navbar_logo_text}>
-                  <h1 className='invisible lg:visible sm:z-index:40 top-0 text-base'>Alders Antonius Samosir</h1>
+                  <h1 className='invisible lg:visible sm:z-index:40 top-0 text-2xl text-bold'>Alders Antonius Samosir</h1>
                 </div>
                 <div className="hidden sm:block flex lg:w-full text-right">
                   <div className={navbarCss.navbar_menu}>
