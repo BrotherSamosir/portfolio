@@ -97,11 +97,11 @@ export default function Works({ portfolio = []})  {
             }
        </div>
        <div className='sm:block md:block lg:hidden p-5'>
-       <div className="flex flex-1 w-full h-full mb-15 justify-center md:mt-10 md:mb-5">
+       <div className="flex flex-1 w-full h-full mb-15 justify-center md:mt-10 md:mb-10">
                 <h1 className="text-xl text-white text-center text-2xl">Explore
                 My Work</h1>
             </div>
-            <ul className='flex flex-row overflow-x-scroll	md:mb-96'>
+            <ul className='flex flex-row overflow-x-scroll	md:mb-96 mt-10'>
                 {
                     portfolio.map(item=>{
                         return (
@@ -116,7 +116,7 @@ export default function Works({ portfolio = []})  {
                             <div className="px-6 py-4">
                             <div className="font-bold text-white text-xl mb-2 text-center">{item.name}</div>
                             <div className="text-white text-base">
-                                <div dangerouslySetInnerHTML={{ __html: `${item.paragraph.substring(0, 200)} ...` }} className='m-h-4'/>
+                                <div dangerouslySetInnerHTML={{ __html: `${item.paragraph.substring(0, 100)} ...` }} className='m-h-4'/>
                             </div>
                             <center>
                             <br/>
