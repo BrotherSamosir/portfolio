@@ -96,7 +96,7 @@ export default function Works({ portfolio = []})  {
                 })
             }
        </div>
-       <div className='sm:block md:block lg:hidden p-5'>
+       <div className='sm:block md:block lg:hidden md:p-5 sm:p-3'>
        <div className="flex flex-1 w-full h-full mb-15 justify-center md:mt-10 md:mb-10">
                 <h1 className="text-xl text-white text-center text-2xl">Explore
                 My Work</h1>
